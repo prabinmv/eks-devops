@@ -30,7 +30,7 @@ phases:
       - echo "IMAGE_TAG=$IMAGE_TAG"
       # Replace placeholder in Kubernetes YAML with actual image URI and tag
       - echo "Updating container image in the Kubernetes Deployment YAML file..."
-      - sed -i 's@CONTAINER_IMAGE@'"$IMAGE_URI:$IMAGE_TAG"'@' kube-manifests/01-DEVOPS-Nginx-Deployment.yml
+      - sed -i 's@CONTAINER_IMAGE@'"$IMAGE_URI:$IMAGE_TAG"'@' kube-manifests/nginx-deploy.yaml
       - echo "Updated deployment manifest content:"
       - cat kube-manifests/01-DEVOPS-Nginx-Deployment.yml
 
