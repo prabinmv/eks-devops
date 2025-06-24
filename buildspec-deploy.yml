@@ -32,7 +32,7 @@ phases:
       - echo "Updating container image in the Kubernetes Deployment YAML file..."
       - sed -i 's@CONTAINER_IMAGE@'"$IMAGE_URI:$IMAGE_TAG"'@' kube-manifests/nginx-deploy.yaml
       - echo "Updated deployment manifest content:"
-      - cat kube-manifests/01-DEVOPS-Nginx-Deployment.yml
+      - cat kube-manifests/nginx-deploy.yaml
 
   build:
     commands:
